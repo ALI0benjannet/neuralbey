@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { assets } from '../assets/assets';
 import { NavLink } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react'; // tu peux importer ce que tu veux pour icônes
 
 function Navbar() {
   const [visible, setVisible] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
+  const toggleModal = () => setShowLoginModal(prev => !prev);
 
   return (
     <div className="flex items-center justify-between py-5 font-medium relative">
@@ -36,6 +40,7 @@ function Navbar() {
           className="w-5 cursor-pointer"
           src={assets.profile_icon}
           alt="Profile"
+          onClick={toggleModal} // clic ouvre modal login
         />
         {/* Mobile menu button */}
         <img
@@ -94,6 +99,85 @@ function Navbar() {
           </NavLink>
         </div>
       </div>
+
+      {/* Modal Login Admin */}
+      {showLoginModal && (
+  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm z-50">
+    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-96 p-8 relative animate-fadeIn">
+      {/* Bouton Fermer */}
+      <button
+        onClick={toggleModal}
+        className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 text-3xl font-bold transition"
+        aria-label="Close modal"
+      >
+        &times;
+      </button>
+
+      {/* Logo en haut */}
+      <div className="flex justify-center mb-6">
+        <img
+          src={assets.logo} // ou ton chemin vers le logo
+          alt="Logo"
+          className="h-16 w-auto object-contain"
+        />
+      </div>
+
+      
+
+      {/* Formulaire */}
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          alert('Connexion admin tentée');
+          setShowLoginModal(false);
+        }}
+        className="space-y-6"
+      >
+        <div>
+          <label
+            htmlFor="login"
+            className="block mb-2 font-semibold text-gray-700 dark:text-gray-300"
+          >
+            Login Admin
+          </label>
+          <input
+            id="login"
+            name="login"
+            type="text"
+            required
+            placeholder="Enter your login"
+            className="w-full rounded-lg border border-gray-300 dark:border-gray-600 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white transition"
+          />
+        </div>
+
+        <div>
+          <label
+            htmlFor="password"
+            className="block mb-2 font-semibold text-gray-700 dark:text-gray-300"
+          >
+            Password
+          </label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            required
+            placeholder="Enter your password"
+            className="w-full rounded-lg border border-gray-300 dark:border-gray-600 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white transition"
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold py-3 rounded-xl shadow-lg transition transform hover:scale-[1.02]"
+        >
+          Sign In
+        </button>
+      </form>
+    </div>
+  </div>
+)}
+
     </div>
   );
 }

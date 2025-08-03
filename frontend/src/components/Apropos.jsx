@@ -42,8 +42,8 @@ function Apropos() {
   ];
 
   const stats = [
-    { number: "100+", label: "Projects Delivered" },
-    { number: "50+", label: "Happy Clients" },
+    { number: "150+", label: "Projects Delivered" },
+    { number: "90+", label: "Happy Clients" },
     { number: "5+", label: "Years Experience" },
     { number: "24/7", label: "Support" }
   ];

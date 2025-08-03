@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import devImage from '../assets/dev.jpg';
 import aiImage from '../assets/ai.jpg';
 import iotImage from '../assets/iot.jpg';
@@ -28,10 +29,11 @@ const services = [
 ];
 
 function Services() {
+  const navigate = useNavigate();
+
   return (
     <>
-    
-          <style jsx>{`
+      <style jsx>{`
         @import url('https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Jost:wght@300;400;500;600&display=swap');
         
         .anton-font {
@@ -65,10 +67,13 @@ function Services() {
                 style={{
                   animation: `fadeInUp 0.8s ease-out ${index * 0.2}s both`
                 }}
+                onClick={() => navigate('/services')}  // redirection au clic
               >
                 {/* Image de fond avec overlay gradient */}
-                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 filter blur-sm"
-                style={{ backgroundImage: `url(${service.bgImage})` }}></div>
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 filter blur-sm"
+                  style={{ backgroundImage: `url(${service.bgImage})` }}
+                ></div>
 
                 {/* Overlay gradient dynamique */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-black/20 transition-all duration-500"></div>
@@ -76,13 +81,9 @@ function Services() {
                 {/* Contenu de la carte */}
                 <div className="relative z-10 h-80 p-6 flex flex-col justify-between">
                   <div className="text-center">
-                    <div className="text-5xl mb-6 transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 filter drop-shadow-lg">
-              
-                    </div>
                     <h3 className="anton-font text-white font-normal text-4xl md:text-3xl mt-12 mb-4 tracking-wide uppercase leading-tight">
-  {service.title}
-</h3>
-
+                      {service.title}
+                    </h3>
                   </div>
 
                   <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
@@ -110,14 +111,15 @@ function Services() {
           {/* Indicateurs animés améliorés */}
           <div className="flex justify-center mt-12 space-x-6">
             {[0, 1, 2, 3].map((i) => (
-              <div 
-                key={i}
-                className="relative"
-              >
-                <div className={`w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-pulse`} 
-                     style={{ animationDelay: `${i * 200}ms` }}></div>
-                <div className={`absolute inset-0 w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-ping`}
-                     style={{ animationDelay: `${i * 200 + 100}ms` }}></div>
+              <div key={i} className="relative">
+                <div
+                  className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-pulse"
+                  style={{ animationDelay: `${i * 200}ms` }}
+                ></div>
+                <div
+                  className="absolute inset-0 w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-ping"
+                  style={{ animationDelay: `${i * 200 + 100}ms` }}
+                ></div>
               </div>
             ))}
           </div>

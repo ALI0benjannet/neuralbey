@@ -68,7 +68,7 @@ function App() {
 
       {/* Hero Section */}
       <div
-        className="max-w-screen-xl h-[70vh] relative bg-cover bg-center mt-5 mb-20"
+        className="max-w-screen-2xl h-[80vh] relative bg-cover bg-center mt-5 mb-20"
         style={{ backgroundImage: `url(${assets.couverture})` }}
       >
         {/* Overlay sombre */}
