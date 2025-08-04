@@ -11,9 +11,6 @@ import social from './social.png'
 import localisation from './localisation.png'
 import tel from './tel.png'
 
-
-
-
 export const assets ={
     couverture,
     logo,
@@ -27,5 +24,9 @@ export const assets ={
     social,
     localisation,
     tel,
+
+
+    
+
     
 }

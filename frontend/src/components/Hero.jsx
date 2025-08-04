@@ -9,62 +9,8 @@ function App() {
 
   return (
     <>
-      {/* Bouton pour ouvrir le menu */}
-      <button
-        onClick={() => setVisible(true)}
-        className="fixed top-4 zleft-4 z-60 p-2 bg-blue-900 text-white rounded-md md:hidden"
-      >
-        Menu
-      </button>
 
-      {/* Side menu for small screens */}
-      <div
-        className={`fixed top-0 left-0 bottom-0 overflow-hidden bg-white transition-all duration-300 ease-in-out z-60 ${
-          visible ? 'w-full' : 'w-0'
-        }`}
-      >
-        <div className="flex flex-col text-gray-600 h-full">
-          <div
-            onClick={() => setVisible(false)}
-            className="flex items-center gap-2 p-3 cursor-pointer border-b"
-          >
-            <img
-              className="h-4 rotate-180"
-              src={assets.dropdown_icon}
-              alt="Back"
-            />
-            <p>Back</p>
-          </div>
-          <NavLink
-            onClick={() => setVisible(false)}
-            className="py-2 pl-6 border-b"
-            to="/"
-          >
-            HOME
-          </NavLink>
-          <NavLink
-            onClick={() => setVisible(false)}
-            className="py-2 pl-6 border-b"
-            to="/services"
-          >
-            SERVICES
-          </NavLink>
-          <NavLink
-            onClick={() => setVisible(false)}
-            className="py-2 pl-6 border-b"
-            to="/internships"
-          >
-            OPPORTUNITIES
-          </NavLink>
-          <NavLink
-            onClick={() => setVisible(false)}
-            className="py-2 pl-6 border-b"
-            to="/contact"
-          >
-            CONTACT US
-          </NavLink>
-        </div>
-      </div>
+     
 
       {/* Hero Section */}
       <div
