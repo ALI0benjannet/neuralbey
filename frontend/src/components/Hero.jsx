@@ -12,7 +12,7 @@ function App() {
       {/* Bouton pour ouvrir le menu */}
       <button
         onClick={() => setVisible(true)}
-        className="fixed top-4 left-4 z-60 p-2 bg-blue-900 text-white rounded-md md:hidden"
+        className="fixed top-4 zleft-4 z-60 p-2 bg-blue-900 text-white rounded-md md:hidden"
       >
         Menu
       </button>
