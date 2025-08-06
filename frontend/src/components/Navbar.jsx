@@ -19,6 +19,17 @@ function Navbar() {
   };
 
   const handleSubmit = (e) => {
+
+    // const res = fetch('http://localhost:8000/api/login/', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(formData),
+    // });
+
+
+
     e.preventDefault();
     if (
       formData.login === 'Admineuralbey@gmail.com' &&
