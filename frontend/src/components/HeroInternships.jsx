@@ -2,7 +2,7 @@ import React from 'react';
 
 function HeroInternships() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+<div className="py-0 bg-gradient-to-br from-white via-white to-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-br from-black via-indigo-950 to-slate-900">
         <div className="absolute inset-0">

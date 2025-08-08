@@ -3,11 +3,13 @@ import {Routes, Route} from 'react-router-dom'
 import Home from './pages/Home'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
-import Internships from './pages/Internships'
+import Internships from './pages/Internships.jsx'
 import Navbar from './components/Navbar.jsx'
 import './index.css';
 import NavbarAdmin from './components/NavbarAdmin.jsx'
 import Admin from './pages/Admin.jsx'
+import ApplyPage from './components/Applypage.jsx'
+import Apply from './pages/Apply.jsx'
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
       <Route path='/internships' element={<Internships/>}/>
       <Route path='/internships/:internshipsId' element={<Internships/>}/>
       <Route path='/admin' element={<Admin/>}/>
+      <Route path="/apply" element={<Apply />} />
+
 
 
 

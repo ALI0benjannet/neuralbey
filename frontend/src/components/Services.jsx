@@ -33,18 +33,19 @@ function Services() {
 
   return (
     <>
-      <style jsx>{`
-        @import url('https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Jost:wght@300;400;500;600&display=swap');
-        
-        .anton-font {
-          font-family: 'Anton', sans-serif;
-          letter-spacing: 0.02em;
-        }
-        
-        .jost-font {
-          font-family: 'Jost', sans-serif;
-        }
-      `}</style>
+      <style>{`
+  @import url('https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Jost:wght@300;400;500;600&display=swap');
+
+  .anton-font {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.02em;
+  }
+  
+  .jost-font {
+    font-family: 'Jost', sans-serif;
+  }
+`}</style>
+
       
       <section id="services" className="py-12 bg-gradient-to-br from-black via-black-900 to-slate-900 relative overflow-hidden">
 

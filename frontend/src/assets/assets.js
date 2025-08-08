@@ -10,6 +10,9 @@ import robot from './robot.jpg'
 import social from './social.png'
 import localisation from './localisation.png'
 import tel from './tel.png'
+import internship1 from './internship1.jpg';
+import internship2 from './internship2.jpg';
+import internship3 from './internship3.jpg';
 
 export const assets ={
     couverture,
@@ -24,6 +27,9 @@ export const assets ={
     social,
     localisation,
     tel,
+    internship1,
+    internship2,
+    internship3,
 
 
     

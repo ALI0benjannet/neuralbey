@@ -1,16 +1,16 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import HeroInternships from '../components/HeroInternships'
-
+import React from 'react';
+import Navbar from '../components/Navbar';
+import HeroInternships from '../components/HeroInternships';
+import InternshipList from '../components/InternshipList'; 
 
 function Internships() {
   return (
     <div>
-        <Navbar />
-        <HeroInternships />
- 
+      <Navbar />
+      <HeroInternships />
+      <InternshipList />
     </div>
-  )
+  );
 }
 
-export default Internships
+export default Internships;
